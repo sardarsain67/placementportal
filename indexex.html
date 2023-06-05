@@ -1,0 +1,218 @@
+<html>
+    <head>
+        <title>index page</title>
+        <style type="text/css">
+            .c{
+                height: 100%;
+                width: 90%;
+                
+                position: relative;
+                left: 5%;
+               
+            }
+            .c1{
+                
+                height: 30%;
+                width: 100%;
+                
+                
+                
+            }
+            .c3{
+                
+                width: 70%;
+                height: 25%;
+                position: relative;
+                left: 15%;
+                text-align: center;
+                float: left;
+                margin-top: 1%;
+                background-image: url();
+               
+            }
+            .c4{
+                
+                width: 50%;
+                height: 25%;
+                position: relative;
+                left: 23%;
+                text-align: center;
+                float: left;
+                margin-top: 1%;
+               
+            }
+            .c5{
+                
+                width: 70%;
+                height: 25%;
+                position: relative;
+                left: 15%;
+                text-align: center;
+                float: left;
+                margin-top: 1%;
+                
+            }
+            .c2{
+                height: 100%;
+                width: 20%;
+                
+                float: left;
+                text-align: center;
+            }
+            .c6{
+                
+                height: 70%;
+                width: 100%;
+            }
+            .c7{
+                height: 100%;
+                width: 50%;
+               padding-top: 5%;
+                float: left;
+                text-align: center;
+                
+            }
+            .c8{
+                height: 100%;
+                width: 50%;
+                
+                float: left;
+            }
+            .c9{
+                
+                width: 100%;
+                height: 20%;
+                position: relative;
+                top: 2%;
+              
+            }
+            .c10{
+                
+                width: 80%;
+                height: 90%;
+                position: relative;
+                left: 10%;
+                top: 5%;
+                border: solid 3px;
+                
+                
+            }
+            .c11{
+                background-color: rgb(176, 163, 167);
+                width: 80%;
+                height: 100%;
+                float: left;
+                
+            }
+            .head{
+                background-image: url("images/curaj.jpeg");
+            }
+        </style>
+        <script type=text/javascript>
+            var x=new Array();
+            
+            var i;
+    
+            for(i=0;i<10;i++)//0-9
+            {
+                x[i]=i;
+            }
+            for(j=65;j<=90;j++) //A-Z
+            {
+                x[i]=String.fromCharCode(j);
+                i++;
+            }
+            for(K=97;K<=123;K++) //a-z
+            {
+                x[i]=String.fromCharCode(K);
+                i++;
+            }
+    
+            
+            function generateCaptcha()
+            {
+                var num1,num2,num3,num4;
+    
+                num1=parseInt(Math.random()*70)%62;
+                num2=parseInt(Math.random()*70)%62;
+                num3=parseInt(Math.random()*70)%62;
+                num4=parseInt(Math.random()*70)%62;
+    
+    
+                var s=x[num1]+''+x[num2]+'' +x[num3]+''+x[num4];
+    
+                document.getElementById("cp").innerHTML=s;
+            }
+           /* function validData()
+            {
+                var num1,num2;
+    
+                num1=document.getElementById("cp").innerHTML;
+                num2=document.myform.ctxt.value;
+    
+                if(num1==num2)
+                document.getElementById("vd").innerHTML="RIGHT";
+                else
+                document.getElementById("vd").innerHTML="WRONG";
+            }
+            function submitData() {
+                validData();
+                isValid = document.getElementById("vd");
+                if(isValid == "RIGHT") {
+                 var result=validateUser();
+    
+                 if(result=="yes")
+                    document.location.href="Welcome.php";;
+                }
+                else {
+                  document.getElementById("vd").innerHTML = "wrong captcha answer";
+                }
+            }
+            */
+        </script>
+    </head>
+    <body onload="generateCaptcha()">
+        <div class="c">
+            <div class="c1">
+                <div class="c2">
+                    <img src="images/download.png" height="100%">
+                </div>
+                <div class="head">
+                
+                <div class="c3">
+                    <h1>CENTRAL UNIVERSITY OF RAJASTHAN</h1>
+                </div>
+                <div class="c4">
+                  
+                </div>
+                <div class="c5">
+                    <h2>Curaj Campus Placement Portal</h2>
+                </div>
+                </div>
+            </div>
+            <div class="c6">
+                <div class="c7">
+                    <iframe height="90%" width="80%" style="position: relative; top: 5%;" src="https://www.youtube.com/embed/MMTTxhT3tqw" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"  autoplay="start"></iframe>
+                </div>
+                <div class="c8">
+                  <br><br><br>
+                    <div class="c10">
+                        <form action="validation.php" method="post">
+                        <fieldset style="border:1px solid black ;">
+                            <p style="position: relative; left: 30%; font-size: 20px;">*UserName<br>
+                            <input style="height: 8%; width: 40%;" type="text" name="name" placeholder="XYZabc@gmail.com"><br><br>
+                            *Password<br>
+                            <input style="height: 8%; width: 40%;" type="text" name="pass" placeholder="Name@123"><br><br>
+                            *Captha : &nbsp;<span id="cp"></span><br><input style="height: 8%; width: 40%;" onchange="validData()"  type="text" placeholder="Xy@5" name="ctxt"><span id="vd"></span><br><br>
+                            <input type="submit" value="LogIn"> &#160<a href="resisterform.html">Forgot Password</a><br><br>
+                            <a href="home.html"> New User</a></p>
+                            <input type="text" value="num1" name="number1" hidden>
+                            <input type="text" value="num2" name="number2" hidden>
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

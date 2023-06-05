@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <title>placement portal</title>
+        <style>
+           table, td{
+                border: 1px solid black;
+                text-align: center;
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <form name=myform method=POST enctype="multipart/form-data" action="studentregister.php">
+        <table style="width: 100%; height: 100%;">
+        <tr><td colspan="6" style="font-size: 20px; color:black; "><strong>** PERSONAL DETAILS OF STUDENT**</strong></td></tr>
+        <tr>
+            <td>* FIRST NAME</td>
+            <td><input type="text" name="ftxt" required></td>
+            <td>* MIDDLE NAME</td>
+            <td><input type="text" name="mtxt"></td>
+            <td>* LAST NAME</td>
+            <td><input type="text" name="ltxt"></td>
+        </tr>
+        <tr>
+            <td>* GENDER</td>
+            <td><input type="radio" name="g" value="male" required>MALE
+                <input type="radio" name="g" value="femele">FEMALE
+            </td>
+            <td>* D.O.B</td>
+            <td><input type="date" name="ddtxt" 
+                placeholder="dd-mm-yyyy" value="" 
+                min="1997-01-01" max="2030-12-31"></td>
+            <td>* PHONE NO. </td>
+            <td> <input  type="text" name="ntxt"  value="+91" size="2">   
+                <input type="ptxt" name="phone" required></td>
+
+        </tr>
+       
+        <tr>
+            <td>* EMAIL</td>
+            <td><input type="text" name="etxt" required></td>
+            <td>* PASSWORD</td>
+            <td><input type="text" name="ptxt" disabled></td>
+            <td>RE-TYPE PASSWORD</td>
+            <td><input type="text" name="rptxt" disabled></td>
+        </tr>
+        <tr><td colspan="6" style="font-size: 20px; color:black; "><strong>** EDUCATION DETAILS **</strong></td></tr>
+        <tr>
+            <td>* STUDENT NAME</td>
+            <td><input type="text" name="stxt" required></td>
+            <td>* ENROLLMENT NO.</td>
+            <td><input type="text" name="entxt" required></td>
+            <td>* ENROLLMENT YEAR</td>
+            <td><select name="enyear"  required>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                </select></td>
+
+        </tr>
+        <tr>
+            <td>* PASSING OUT YEAR</td>
+            <td>
+                <select name="passtxt" required>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                </select>
+            </td>
+            <td>* GRADUATION DEGREE AND % </td>
+            <td>
+                <select name="dg" required>
+                    <option>B.A</option>
+                    <option>B.Com</option>
+                    <option>B.Sc</option>
+                    <option>B.Ed</option>
+                    <option>B.A</option>
+                    <option>M.Sc</option>
+                    <option>B.Tech</option>
+                    <option>M.Tech</option>
+                </select>
+                <input type="text" name="dgper" placeholder="% or CGPA">
+            </td>
+            <td>* SPECIALIZATION</td>
+            <td>
+                <select name="branch" required>
+                    <option>Labor Specialization</option>
+                    <option>Departmental Specialization</option>
+                    <option>Business Specialization</option>
+                    <option>Regional Specialization</option>
+                    <option>Country Specialization</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>* YEAR OF PASSING 10th </td>
+            <td>
+                <select name="ttxt" required>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                </select>
+            </td>
+            <td>* CGPA OR % OF 10th</td>
+            <td><input type="text" name="pert"></td>
+            <td>* BOARD</td>
+            <td><input type="text" name="bt"></td>
+        </tr>
+        <tr>
+            <td>* YEAR OF PASSING 12th</td>
+            <td>
+                <select name="twtxt">
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                </select>
+            </td>
+            <td>* CGPA OR % OF 12th</td>
+            <td><input type="text" name="pertw"></td>
+            <td>* BOARD</td>
+            <td><input type="text" name="btw"></td>
+        </tr>
+        <tr>
+            <td>* GAP BETWEEN 10th OR 12th </td>
+            <td><input type="text" name="a5txt"></td>
+            <td>* GAP BETWEEN 12th OR<br> GRADUATION</td>
+            <td><input type="text" name="a6txt"></td>
+            <td>* TOTAL ACADEMIC GAP</td>
+            <td><input type="text" name="a7txt"></td>
+        </tr>
+        <tr>
+            <td>* POST GRADUATION CGPA<br>POST GRADUATION DEGREE<br>BRANCH</td>
+            <td><input type="text" name="a8txt" placeholder="%or CGPA"><BR><input type="text" name="pgtxt" placeholder="phd, pg etc"><br><input type="text" name="pgbranch" placeholder="cse, ece etc.."></td>
+            <td><br>SUMMER INTERNSHIP COMPANY<br> NAME WITH CONTACT NUMBER<br>AND EMAIL ADDRESS </td>
+            <td colspan="3"><textarea cols="50" rows="4" name="a9txt"></textarea></td>
+        </tr>
+        <tr>
+            <td>* PROJECT TITLE</td>
+            <td><input type="text" name="b1txt"></td>
+            <td>* DURATION OF INTERNSHIP</td>
+            <td><input type="text" name="b2txt" placeholder="dd-mm-yyyy to dd-mm-yyyy"></td>
+            <td>* PLACE OF SUMMER INTERNSHIP</td>
+            <td><input type="text" name="b3txt"></td>
+        </tr>
+        <tr>
+            <td>* PERSONAL EMAIL ID</td>
+            <td><input type="text" name="b4txt" required></td>
+            <td>COLLEGE EMAIL ID</td>
+            <td><input type="text" name="b5txt" required></td>
+            <td>STUDENT MOBILE NO.</td>
+            <td> <input  type="text" name="n0txt"  value="+91" size="2">   
+                <input type="ptxt" name="phone" required></td>
+
+        </tr>
+        <tr>
+            
+            <td>PERMANENT ADDRESS WITH <br>PIN CODE</td>
+            <td colspan="2" ><textarea cols="40" rows="3" name="potxt" required></textarea></td>
+            <td>CURRENT ADDRESS WITH <br>PIN CODE</td>
+            <td colspan="2"><textarea cols="40" rows="3" name="addtxt" required></textarea></td>
+
+        </tr>
+        <tr>
+            <td>STUDENT WHATSAPP NUMBER</td>
+            <td><input type="text" name="b6txt" required></td>
+            <td>PARENT'S NAME</td>
+            <td><input type="text" name="b7txt" required></td>
+            <td>PARENT'S CONTECT NO.</td>
+            <td><input type="text" name="b8txt" required></td>
+            
+        </tr>
+        <tr> 
+            <td>* HOME TOWN</td>
+            <td><input type="text" name="b9txt"></td>
+            <td>* HOME STATE</td>
+            <td><input type="text" name="b10txt"></td>
+            <td>* INTERSTED IN PLACEMENTS OR NOT</td>
+            <td><input type="radio" name="b0txt" value="yes" required>yes
+                <input type="radio" name="b0txt" value="no">No</td>
+        </tr>
+        <tr>
+            <td colspan="3">Upload your updated resume<input type="file" name="restxt" ></td>
+            <td colspan="3">Upload your profile<input type="file" name="protxt" ></td>
+        </tr>
+    </table>
+   <br>
+    
+        <table style="width:100%" >
+            <tr>
+                <td align="center" colspan="6"> <input type="submit" value="Submit"> &nbsp;<input type="reset" value="Clear All"></td>
+            </tr>
+        </table> 
+        
+        <a href="index.php"> go login page</a>
+        </form>      
+    </body>
+</html>

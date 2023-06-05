@@ -1,0 +1,139 @@
+.main{
+    width: 100%;
+    height: 1000px;
+    background-color:aqua;
+    border: solid 3px;
+    
+    margin: 0;
+    padding: 0;
+}
+.head{
+   width: 85%;
+   height: 5%;
+   background-color: white;
+   overflow-x: auto;
+   overflow-y: auto;
+   text-align:justify;
+   float: left;
+   
+}
+.contant{
+   width:  15%;
+   height: 100%;
+   background-color:white;
+ 
+   float: left;
+}
+
+.body{
+   width: 85%;
+   height: 95%;
+   
+   overflow-x: auto;
+   overflow-y: auto;
+   text-align:justify;
+   float: left;
+   
+}
+.sub-body{
+    width: 100%;
+    height: 100%;
+    background-color:burlywood;
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align:justify;
+    float: left;
+    
+ }
+ .logo{
+    width: 100%;
+    height: 15%;
+    border-bottom: double 3px;
+    
+    
+}
+.action{
+    width: 100%;
+    height: 85%;
+    border-bottom: 5px;
+    color: white;
+    
+}
+
+.action ul li{
+    width: 100%;
+    background:#2bab0d;
+    padding: 5%;
+    margin: 10%;
+    text-align: left;
+    color: white;
+}
+.action   ul li a{
+   
+    text-decoration: none;
+    color:white;
+    
+}
+.active:hover
+{
+ background: #2bab0d;
+ border-radius: 3px;
+}
+.active, .action ul li:hover
+{
+ background: #2bab0d;
+ border-radius: 3px;
+}
+.sub-action-com{
+    display: none;
+}
+.action ul li:hover .sub-action-com{
+    display: block;
+    position: absolute;
+    background: rgb(0, 100, 0);
+    
+  margin-left: -15px;
+}
+.action ul li:hover .sub-action-com ul{
+    display: block;
+    margin: 10px;
+}
+
+.sub-action-com ul li{
+    width: 100%;
+    color: white;
+    padding: 5%;
+    margin: 10%;
+    text-align: left;
+}
+.head ul  :hover
+{
+ background: #ab0d67;
+ border-radius: 3px;
+}
+
+.head ul li{
+   width: 5%;
+    background:#fff;
+   display: inline;
+   margin-left: 10%;
+   border-radius: 3px;
+   color: black;
+}
+.head ul li  :first-child{
+    width: 5%;
+    
+    display: inline;
+    
+ }
+ .head ul li  :last-child{
+    width: 5%;
+    
+    display: inline;
+    margin-left: 0%;
+ }
+ .head ul li a{
+    text-decoration: none;
+    color:darkblue;
+    
+}
